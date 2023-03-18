@@ -22,14 +22,14 @@ public class StudentServiceImpl implements StudentService {
     public Long save(StudentDTO dto) {
         LOGGER.debug("Start Methode Save");
         StudentDTO studentDTO = mapper.convertToDto(repository.save(mapper.convertToEntity(dto)));
-        return studentDTO.getId();
+        return studentDTO.getStudentIdDTO().getId();
     }
 
     @Override
     public Long update(StudentDTO dto) {
         LOGGER.debug("Start Methode update");
         StudentDTO studentDTO = mapper.convertToDto(repository.save(mapper.convertToEntity(dto)));
-        return studentDTO.getId();
+        return studentDTO.getStudentIdDTO().getId();
     }
 
     @Override
