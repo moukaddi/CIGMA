@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/shop
     username: root
-    password: Robinhood6303
+    password: root
   jpa:
     database: mysql
     show-sql: true
@@ -14,4 +14,5 @@ spring:
       ddl-auto: create-drop
 logging:
   level:
-    ma.pfe: INFO
+    org.springframework.web: DEBUG
+    ma.pfe: DEBUG
