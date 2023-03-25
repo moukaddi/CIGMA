@@ -1,18 +1,20 @@
 package ma.pfe.dtos;
 
-import ma.pfe.entities.Adresse;
+import java.util.List;
 
 public class StudentDTO {
-    private StudentIdDTO studentIdDTO;
+    private StudentIdDTO studentId;
+    private List<CourseDTO> courses;
     private String name;
     private AdresseDTO adresse;
+    private NiveauDTO niveau;
 
-    public StudentIdDTO getStudentIdDTO() {
-        return studentIdDTO;
+    public StudentIdDTO getStudentId() {
+        return studentId;
     }
 
-    public void setStudentIdDTO(StudentIdDTO studentIdDTO) {
-        this.studentIdDTO = studentIdDTO;
+    public void setStudentId(StudentIdDTO studentId) {
+        this.studentId = studentId;
     }
 
     public AdresseDTO getAdresse() {
@@ -31,12 +33,30 @@ public class StudentDTO {
         this.name = name;
     }
 
+    public List<CourseDTO> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<CourseDTO> courses) {
+        this.courses = courses;
+    }
+
+    public NiveauDTO getNiveau() {
+        return niveau;
+    }
+
+    public void setNiveau(NiveauDTO niveau) {
+        this.niveau = niveau;
+    }
+
     @Override
     public String toString() {
         return "StudentDTO{" +
-                "studentIdDTO=" + studentIdDTO +
+                "studentId=" + studentId +
+                ", courses=" + courses +
                 ", name='" + name + '\'' +
                 ", adresse=" + adresse +
+                ", niveau=" + niveau +
                 '}';
     }
 }
